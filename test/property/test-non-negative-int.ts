@@ -1,13 +1,15 @@
 import { testProp } from 'ava-fast-check'
+import { Int } from 'io-ts'
 import { NonNegative } from 'io-ts-numbers'
 
-import { NonNegativeArbitrary } from '../../src/NonNegative'
+import { NonNegativeIntArbitrary } from '../../src/NonNegativeInt'
 
 testProp(
-  'should yield non-negative numbers',
-  [NonNegativeArbitrary],
+  'should yield non-negative integers',
+  [NonNegativeIntArbitrary],
   (t, num) => {
     t.true(NonNegative.is(num))
+    t.true(Int.is(num))
   },
   {
     verbose: true,

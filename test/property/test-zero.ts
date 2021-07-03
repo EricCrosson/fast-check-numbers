@@ -4,7 +4,7 @@ import { Zero } from 'io-ts-numbers'
 import { ZeroArbitrary } from '../../src/Zero'
 
 testProp(
-  'should yield positive numbers',
+  'should yield zero',
   [ZeroArbitrary],
   (t, num) => {
     t.true(Zero.is(num))
