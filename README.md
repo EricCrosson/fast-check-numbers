@@ -20,14 +20,17 @@ npm install fast-check-numbers
 ## Use
 
 ``` typescript
-import { fastCheckNumbers } from 'fast-check-numbers'
-// TODO: describe usage
+import * as fc from 'fast-check'
+import { PositiveArbitrary } from 'fast-check-numbers'
+
+fc.sample(PositiveArbitrary, 1)
+// => [ 1018.612465441227 ]
 ```
 
 ## Related
 
-TODO
+- [io-ts-numbers](https://github.com/EricCrosson/io-ts-numbers)
 
 ## Acknowledgments
 
-TODO
+- [fast-check](https://github.com/dubzzz/fast-check)
